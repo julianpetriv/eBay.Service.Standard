@@ -164,15 +164,13 @@ namespace eBay.Service.Call
 		/// </span>
 		/// </param>
 		///
-		public BidderNoticePreferencesType GetUserPreferences(bool ShowBidderNoticePreferences, bool ShowCombinedPaymentPreferences, bool ShowCrossPromotionPreferences, bool ShowSellerPaymentPreferences, bool ShowEndOfAuctionEmailPreferences, bool ShowSellerFavoriteItemPreferences, bool ShowProStoresPreferences, bool ShowEmailShipmentTrackingNumberPreference, bool ShowRequiredShipPhoneNumberPreference, bool ShowSellerExcludeShipToLocationPreference, bool ShowUnpaidItemAssistancePreference, bool ShowPurchaseReminderEmailPreferences, bool ShowUnpaidItemAssistanceExclusionList, bool ShowSellerProfilePreferences, bool ShowSellerReturnPreferences, bool ShowGlobalShippingProgramPreference, bool ShowDispatchCutoffTimePreferences, bool ShowGlobalShippingProgramListingPreference, bool ShowOverrideGSPServiceWithIntlServicePreference, bool ShowPickupDropoffPreferences, bool ShowOutOfStockControlPreference, bool ShoweBayPLUSPreference)
+		public BidderNoticePreferencesType GetUserPreferences(bool ShowBidderNoticePreferences, bool ShowCombinedPaymentPreferences, bool ShowSellerPaymentPreferences, bool ShowEndOfAuctionEmailPreferences, bool ShowSellerFavoriteItemPreferences, bool ShowEmailShipmentTrackingNumberPreference, bool ShowRequiredShipPhoneNumberPreference, bool ShowSellerExcludeShipToLocationPreference, bool ShowUnpaidItemAssistancePreference, bool ShowPurchaseReminderEmailPreferences, bool ShowUnpaidItemAssistanceExclusionList, bool ShowSellerProfilePreferences, bool ShowSellerReturnPreferences, bool ShowGlobalShippingProgramPreference, bool ShowDispatchCutoffTimePreferences, bool ShowGlobalShippingProgramListingPreference, bool ShowOverrideGSPServiceWithIntlServicePreference, bool ShowPickupDropoffPreferences, bool ShowOutOfStockControlPreference, bool ShoweBayPLUSPreference)
 		{
 			this.ShowBidderNoticePreferences = ShowBidderNoticePreferences;
 			this.ShowCombinedPaymentPreferences = ShowCombinedPaymentPreferences;
-			this.ShowCrossPromotionPreferences = ShowCrossPromotionPreferences;
 			this.ShowSellerPaymentPreferences = ShowSellerPaymentPreferences;
 			this.ShowEndOfAuctionEmailPreferences = ShowEndOfAuctionEmailPreferences;
 			this.ShowSellerFavoriteItemPreferences = ShowSellerFavoriteItemPreferences;
-			this.ShowProStoresPreferences = ShowProStoresPreferences;
 			this.ShowEmailShipmentTrackingNumberPreference = ShowEmailShipmentTrackingNumberPreference;
 			this.ShowRequiredShipPhoneNumberPreference = ShowRequiredShipPhoneNumberPreference;
 			this.ShowSellerExcludeShipToLocationPreference = ShowSellerExcludeShipToLocationPreference;
@@ -197,11 +195,10 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public void GetUserPreferences(bool ShowBidderNoticePreferences, bool ShowCombinedPaymentPreferences, bool ShowCrossPromotionPreferences, bool ShowSellerPaymentPreferences, bool ShowSellerFavoriteItemPreferences)
+		public void GetUserPreferences(bool ShowBidderNoticePreferences, bool ShowCombinedPaymentPreferences, bool ShowSellerPaymentPreferences, bool ShowSellerFavoriteItemPreferences)
 		{
 			this.ShowBidderNoticePreferences = ShowBidderNoticePreferences;
 			this.ShowCombinedPaymentPreferences = ShowCombinedPaymentPreferences;
-			this.ShowCrossPromotionPreferences = ShowCrossPromotionPreferences;
 			this.ShowSellerPaymentPreferences = ShowSellerPaymentPreferences;
 			this.ShowSellerFavoriteItemPreferences = ShowSellerFavoriteItemPreferences;
 			Execute();
@@ -209,11 +206,10 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public BidderNoticePreferencesType GetUserPreferences(bool ShowBidderNoticePreferences, bool ShowCombinedPaymentPreferences, bool ShowCrossPromotionPreferences, bool ShowSellerPaymentPreferences, bool ShowEndOfAuctionEmailPreferences, bool ShowSellerFavoriteItemPreferences)
+		public BidderNoticePreferencesType GetUserPreferences(bool ShowBidderNoticePreferences, bool ShowCombinedPaymentPreferences, bool ShowSellerPaymentPreferences, bool ShowEndOfAuctionEmailPreferences, bool ShowSellerFavoriteItemPreferences)
 		{
 			this.ShowBidderNoticePreferences = ShowBidderNoticePreferences;
 			this.ShowCombinedPaymentPreferences = ShowCombinedPaymentPreferences;
-			this.ShowCrossPromotionPreferences = ShowCrossPromotionPreferences;
 			this.ShowSellerPaymentPreferences = ShowSellerPaymentPreferences;
 			this.ShowEndOfAuctionEmailPreferences = ShowEndOfAuctionEmailPreferences;
 			this.ShowSellerFavoriteItemPreferences = ShowSellerFavoriteItemPreferences;
@@ -275,15 +271,6 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetUserPreferencesRequestType.ShowCrossPromotionPreferences"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool ShowCrossPromotionPreferences
-		{ 
-			get { return ApiRequest.ShowCrossPromotionPreferences.Value; }
-			set { ApiRequest.ShowCrossPromotionPreferences = value; }
-		}
-		
- 		/// <summary>
 		/// Gets or sets the <see cref="GetUserPreferencesRequestType.ShowSellerPaymentPreferences"/> of type <see cref="bool"/>.
 		/// </summary>
 		public bool ShowSellerPaymentPreferences
@@ -308,15 +295,6 @@ namespace eBay.Service.Call
 		{ 
 			get { return ApiRequest.ShowSellerFavoriteItemPreferences.Value; }
 			set { ApiRequest.ShowSellerFavoriteItemPreferences = value; }
-		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetUserPreferencesRequestType.ShowProStoresPreferences"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool ShowProStoresPreferences
-		{ 
-			get { return ApiRequest.ShowProStoresPreferences.Value; }
-			set { ApiRequest.ShowProStoresPreferences = value; }
 		}
 		
  		/// <summary>
@@ -472,14 +450,6 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetUserPreferencesResponseType.CrossPromotionPreferences"/> of type <see cref="CrossPromotionPreferencesType"/>.
-		/// </summary>
-		public CrossPromotionPreferencesType CrossPromotionPreferences
-		{ 
-			get { return ApiResponse.CrossPromotionPreferences; }
-		}
-		
- 		/// <summary>
 		/// Gets the returned <see cref="GetUserPreferencesResponseType.SellerPaymentPreferences"/> of type <see cref="SellerPaymentPreferencesType"/>.
 		/// </summary>
 		public SellerPaymentPreferencesType SellerPaymentPreferences
@@ -520,14 +490,6 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetUserPreferencesResponseType.ProStoresPreference"/> of type <see cref="ProStoresCheckoutPreferenceType"/>.
-		/// </summary>
-		public ProStoresCheckoutPreferenceType ProStoresPreference
-		{ 
-			get { return ApiResponse.ProStoresPreference; }
-		}
-		
- 		/// <summary>
 		/// Gets the returned <see cref="GetUserPreferencesResponseType.UnpaidItemAssistancePreferences"/> of type <see cref="UnpaidItemAssistancePreferencesType"/>.
 		/// </summary>
 		public UnpaidItemAssistancePreferencesType UnpaidItemAssistancePreferences
@@ -550,15 +512,6 @@ namespace eBay.Service.Call
 		{ 
 			get { return ApiResponse.PurchaseReminderEmailPreferences; }
 		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetUserPreferencesResponseType.SellerThirdPartyCheckoutDisabled"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool SellerThirdPartyCheckoutDisabled
-		{ 
-			get { return ApiResponse.SellerThirdPartyCheckoutDisabled.Value; }
-		}
-		
  		/// <summary>
 		/// Gets the returned <see cref="GetUserPreferencesResponseType.SellerProfilePreferences"/> of type <see cref="SellerProfilePreferencesType"/>.
 		/// </summary>
@@ -621,14 +574,6 @@ namespace eBay.Service.Call
 		public bool OutOfStockControlPreference
 		{ 
 			get { return ApiResponse.OutOfStockControlPreference.Value; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetUserPreferencesResponseType.eBayPLUSPreference"/> of type <see cref="eBayPLUSPreferenceTypeCollection"/>.
-		/// </summary>
-		public List<eBayPLUSPreferenceType> eBayPLUSPreferenceList
-		{ 
-			get { return ApiResponse.eBayPLUSPreference; }
 		}
 		
 

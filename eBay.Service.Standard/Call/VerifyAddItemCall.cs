@@ -92,12 +92,7 @@ namespace eBay.Service.Call
 					if (Item.PictureDetails == null)
 					{
 						Item.PictureDetails = new PictureDetailsType();
-						Item.PictureDetails.PhotoDisplay = PhotoDisplayCodeType.None;
 					} 
-					else if (!Item.PictureDetails.PhotoDisplay.HasValue || Item.PictureDetails.PhotoDisplay == PhotoDisplayCodeType.CustomCode)
-					{
-						Item.PictureDetails.PhotoDisplay = PhotoDisplayCodeType.None;
-					}
 
 					string[] pics = new string[mPictureFileList.Count];
 
@@ -241,21 +236,6 @@ namespace eBay.Service.Call
 			get { return ApiResponse.Fees; }
 		}
 		
- 		/// <summary>
-		/// Gets the returned <see cref="VerifyAddItemResponseType.ExpressListing"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool ExpressListing
-		{ 
-			get { return ApiResponse.ExpressListing.Value; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="VerifyAddItemResponseType.ExpressItemRequirements"/> of type <see cref="ExpressItemRequirementsType"/>.
-		/// </summary>
-		public ExpressItemRequirementsType ExpressItemRequirements
-		{ 
-			get { return ApiResponse.ExpressItemRequirements; }
-		}
 		
  		/// <summary>
 		/// Gets the returned <see cref="VerifyAddItemResponseType.CategoryID"/> of type <see cref="string"/>.
@@ -287,14 +267,6 @@ namespace eBay.Service.Call
 		public ProductSuggestionsType ProductSuggestions
 		{ 
 			get { return ApiResponse.ProductSuggestions; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="VerifyAddItemResponseType.ListingRecommendations"/> of type <see cref="ListingRecommendationsType"/>.
-		/// </summary>
-		public ListingRecommendationsType ListingRecommendations
-		{ 
-			get { return ApiResponse.ListingRecommendations; }
 		}
 		
 

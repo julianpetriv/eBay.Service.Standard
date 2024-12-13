@@ -243,7 +243,7 @@ namespace eBay.Service
         public System.Collections.Generic.List<Core.Soap.OrderType> GetOrders(params string[] orderIDList)
         {
             var orders = this.GetOrders(new Core.Soap.GetOrdersRequestType { OrderIDArray = new System.Collections.Generic.List<string>(orderIDList) });
-            return orders.OrderArray;
+            return orders.OrderArray.Order;
         }
         /// <summary>
         /// 搜索eBay订单
@@ -310,45 +310,6 @@ namespace eBay.Service
                 ModTimeTo = ModTimeTo
             });
             return apicall;
-        }
-        /// <summary>
-        /// 完成订单，并上传发货跟踪号
-        /// </summary>
-        /// <param name="deliveryStatus"></param>
-        /// <param name="shippingCarrierUsed"></param>
-        /// <param name="shipmentTrackingNumber"></param>
-        /// <param name="deliveryDate"></param>
-        /// <param name="ItemID"></param>
-        /// <param name="TransactionID"></param>
-        /// <param name="Paid"></param>
-        /// <param name="Shipped"></param>
-        public void CompleteSale(Core.Soap.ShipmentDeliveryStatusCodeType deliveryStatus, string shippingCarrierUsed, string shipmentTrackingNumber, System.DateTime deliveryDate,
-            string ItemID, string TransactionID, bool Paid, bool Shipped)
-        {
-            //var apicall = new eBay.Service.Call.CompleteSaleCall(this.ApiContext)
-            //{
-            //    Shipment = new ShipmentType
-            //    {
-            //        DeliveryStatus = deliveryStatus,
-            //        //ShipmentTrackingDetails=new ShipmentTrackingDetailsTypeCollection(),
-            //        ShippingCarrierUsed = shippingCarrierUsed,
-
-            //        ShipmentTrackingNumber = shipmentTrackingNumber,
-            //        DeliveryDate = deliveryDate,
-            //    }
-            //};
-            //apicall.CompleteSale(ItemID, TransactionID, Paid, Shipped);
-            var apicall = this.CompleteSale(new Core.Soap.CompleteSaleRequestType
-            {
-                Shipment = new Core.Soap.ShipmentType
-                {
-                    DeliveryStatus = deliveryStatus,
-                    //ShipmentTrackingDetails=new System.Collections.Generic.List<Core.Soap.ShipmentTrackingDetailsType>(),
-                    ShippingCarrierUsed = shippingCarrierUsed,
-                    ShipmentTrackingNumber = shipmentTrackingNumber,
-                    DeliveryDate = deliveryDate
-                }
-            });
         }
         public eBay.Service.Core.Soap.GeteBayDetailsResponseType GeteBayDetails(params Core.Soap.DetailNameCodeType[] items)
         {

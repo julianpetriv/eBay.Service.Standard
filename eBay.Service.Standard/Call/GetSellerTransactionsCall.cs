@@ -374,14 +374,6 @@ namespace eBay.Service.Call
 			get { return ApiResponse.TransactionArray; }
 		}
 		
- 		/// <summary>
-		/// Gets the returned <see cref="GetSellerTransactionsResponseType.PayPalPreferred"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool PayPalPreferred
-		{ 
-			get { return ApiResponse.PayPalPreferred.Value; }
-		}
-		
 
 		#endregion
 

@@ -108,9 +108,6 @@ namespace eBay.Service.Call
 			this.ActiveList = ActiveList;
 			this.SoldList = SoldList;
 			this.UnsoldList = UnsoldList;
-			this.BidList = BidList;
-			this.DeletedFromSoldList = DeletedFromSoldList;
-			this.DeletedFromUnsoldList = DeletedFromUnsoldList;
 			this.SellingSummary = SellingSummary;
 			this.HideVariations = HideVariations;
 
@@ -197,33 +194,6 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetMyeBaySellingRequestType.BidList"/> of type <see cref="ItemListCustomizationType"/>.
-		/// </summary>
-		public ItemListCustomizationType BidList
-		{ 
-			get { return ApiRequest.BidList; }
-			set { ApiRequest.BidList = value; }
-		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetMyeBaySellingRequestType.DeletedFromSoldList"/> of type <see cref="ItemListCustomizationType"/>.
-		/// </summary>
-		public ItemListCustomizationType DeletedFromSoldList
-		{ 
-			get { return ApiRequest.DeletedFromSoldList; }
-			set { ApiRequest.DeletedFromSoldList = value; }
-		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetMyeBaySellingRequestType.DeletedFromUnsoldList"/> of type <see cref="ItemListCustomizationType"/>.
-		/// </summary>
-		public ItemListCustomizationType DeletedFromUnsoldList
-		{ 
-			get { return ApiRequest.DeletedFromUnsoldList; }
-			set { ApiRequest.DeletedFromUnsoldList = value; }
-		}
-		
- 		/// <summary>
 		/// Gets or sets the <see cref="GetMyeBaySellingRequestType.SellingSummary"/> of type <see cref="ItemListCustomizationType"/>.
 		/// </summary>
 		public ItemListCustomizationType SellingSummary
@@ -281,39 +251,14 @@ namespace eBay.Service.Call
 		{ 
 			get { return ApiResponse.UnsoldList; }
 		}
-		
- 		/// <summary>
+
+		/// <summary>
 		/// Gets the returned <see cref="GetMyeBaySellingResponseType.Summary"/> of type <see cref="MyeBaySellingSummaryType"/>.
 		/// </summary>
 		public MyeBaySellingSummaryType Summary
-		{ 
+		{
 			get { return ApiResponse.Summary; }
 		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetMyeBaySellingResponseType.BidList"/> of type <see cref="PaginatedItemArrayType"/>.
-		/// </summary>
-		public PaginatedItemArrayType BidListReturn
-		{ 
-			get { return ApiResponse.BidList; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetMyeBaySellingResponseType.DeletedFromSoldList"/> of type <see cref="PaginatedOrderTransactionArrayType"/>.
-		/// </summary>
-		public PaginatedOrderTransactionArrayType DeletedFromSoldListReturn
-		{ 
-			get { return ApiResponse.DeletedFromSoldList; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetMyeBaySellingResponseType.DeletedFromUnsoldList"/> of type <see cref="PaginatedItemArrayType"/>.
-		/// </summary>
-		public PaginatedItemArrayType DeletedFromUnsoldListReturn
-		{ 
-			get { return ApiResponse.DeletedFromUnsoldList; }
-		}
-		
 
 		#endregion
 

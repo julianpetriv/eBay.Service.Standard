@@ -182,14 +182,6 @@ namespace eBay.Service.Call
 			get { return ApiResponse.ProductSuggestions; }
 		}
 		
- 		/// <summary>
-		/// Gets the returned <see cref="VerifyRelistItemResponseType.ListingRecommendations"/> of type <see cref="ListingRecommendationsType"/>.
-		/// </summary>
-		public ListingRecommendationsType ListingRecommendations
-		{ 
-			get { return ApiResponse.ListingRecommendations; }
-		}
-		
 
 		#endregion
 

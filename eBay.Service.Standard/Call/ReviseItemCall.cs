@@ -116,17 +116,12 @@ namespace eBay.Service.Call
 				if (Item.PictureDetails == null)
 				{
 					Item.PictureDetails = new PictureDetailsType();
-					Item.PictureDetails.PhotoDisplay = PhotoDisplayCodeType.None;
 				} 
-				else if (!Item.PictureDetails.PhotoDisplay.HasValue || Item.PictureDetails.PhotoDisplay == PhotoDisplayCodeType.CustomCode)
-				{
-					Item.PictureDetails.PhotoDisplay = PhotoDisplayCodeType.None;
-				}
 
 				try
 				{
 					Item.PictureDetails.PictureURL = new List<string>();
-					Item.PictureDetails.PictureURL.AddRange(eps.UpLoadPictureFiles(Item.PictureDetails.PhotoDisplay.Value, PictureFileList.ToArray()));
+					Item.PictureDetails.PictureURL.AddRange(eps.UpLoadPictureFiles(PictureFileList.ToArray()));
 				} 
 				catch (Exception ex)
 				{
@@ -292,14 +287,6 @@ namespace eBay.Service.Call
 		public ProductSuggestionsType ProductSuggestions
 		{ 
 			get { return ApiResponse.ProductSuggestions; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="ReviseItemResponseType.ListingRecommendations"/> of type <see cref="ListingRecommendationsType"/>.
-		/// </summary>
-		public ListingRecommendationsType ListingRecommendations
-		{ 
-			get { return ApiResponse.ListingRecommendations; }
 		}
 		
 

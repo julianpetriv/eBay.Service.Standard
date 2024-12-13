@@ -174,7 +174,6 @@ namespace eBay.Service.Call
 		{
 			this.ItemID = ItemID;
 			this.IncludeWatchCount = IncludeWatchCount;
-			this.IncludeCrossPromotion = IncludeCrossPromotion;
 			this.IncludeItemSpecifics = IncludeItemSpecifics;
 			this.IncludeTaxTable = IncludeTaxTable;
 			this.SKU = SKU;
@@ -258,15 +257,6 @@ namespace eBay.Service.Call
 		{ 
 			get { return ApiRequest.IncludeWatchCount; }
 			set { ApiRequest.IncludeWatchCount = value; }
-		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetItemRequestType.IncludeCrossPromotion"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool? IncludeCrossPromotion
-		{ 
-			get { return ApiRequest.IncludeCrossPromotion; }
-			set { ApiRequest.IncludeCrossPromotion = value; }
 		}
 		
  		/// <summary>

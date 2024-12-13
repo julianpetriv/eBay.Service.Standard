@@ -77,7 +77,6 @@ namespace eBay.Service.Call
 		{
 			this.ItemID = ItemID;
 			this.UserID = UserID;
-			this.IncludeExpressRequirements = IncludeExpressRequirements;
 			this.IncludeFeatureEligibility = IncludeFeatureEligibility;
 
 			Execute();
@@ -164,15 +163,6 @@ namespace eBay.Service.Call
 		{ 
 			get { return ApiRequest.UserID; }
 			set { ApiRequest.UserID = value; }
-		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetUserRequestType.IncludeExpressRequirements"/> of type <see cref="bool"/>.
-		/// </summary>
-		public bool IncludeExpressRequirements
-		{ 
-			get { return ApiRequest.IncludeExpressRequirements.Value; }
-			set { ApiRequest.IncludeExpressRequirements = value; }
 		}
 		
  		/// <summary>

@@ -64,7 +64,6 @@ namespace eBay.Service.Call
         ///
         public void DeleteMyMessages(List<string> AlertIDList, List<string> MessageIDList)
         {
-            this.AlertIDList = AlertIDList;
             this.MessageIDList = MessageIDList;
 
             Execute();
@@ -103,16 +102,6 @@ namespace eBay.Service.Call
         public DeleteMyMessagesResponseType ApiResponse
         {
             get { return (DeleteMyMessagesResponseType)AbstractResponse; }
-        }
-
-
-        /// <summary>
-        /// Gets or sets the <see cref="DeleteMyMessagesRequestType.AlertIDs"/> of type <see cref="List<string>"/>.
-        /// </summary>
-        public List<string> AlertIDList
-        {
-            get { return ApiRequest.AlertIDs; }
-            set { ApiRequest.AlertIDs = value; }
         }
 
         /// <summary>

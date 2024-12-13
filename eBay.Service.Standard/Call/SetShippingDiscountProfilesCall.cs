@@ -100,7 +100,7 @@ namespace eBay.Service.Call
 		/// This field is no longer applicable as it is not longer possible for a seller to offer a buyer shipping insurance.
 		/// </param>
 		///
-		public void SetShippingDiscountProfiles(CurrencyCodeType CurrencyID, CombinedPaymentPeriodCodeType CombinedDuration, ModifyActionCodeType ModifyActionCode, FlatShippingDiscountType FlatShippingDiscount, CalculatedShippingDiscountType CalculatedShippingDiscount, CalculatedHandlingDiscountType CalculatedHandlingDiscount, PromotionalShippingDiscountDetailsType PromotionalShippingDiscountDetails, ShippingInsuranceType ShippingInsurance, ShippingInsuranceType InternationalShippingInsurance)
+		public void SetShippingDiscountProfiles(CurrencyCodeType CurrencyID, CombinedPaymentPeriodCodeType CombinedDuration, ModifyActionCodeType ModifyActionCode, FlatShippingDiscountType FlatShippingDiscount, CalculatedShippingDiscountType CalculatedShippingDiscount, CalculatedHandlingDiscountType CalculatedHandlingDiscount, PromotionalShippingDiscountDetailsType PromotionalShippingDiscountDetails)
 		{
 			this.CurrencyID = CurrencyID;
 			this.CombinedDuration = CombinedDuration;
@@ -109,8 +109,6 @@ namespace eBay.Service.Call
 			this.CalculatedShippingDiscount = CalculatedShippingDiscount;
 			this.CalculatedHandlingDiscount = CalculatedHandlingDiscount;
 			this.PromotionalShippingDiscountDetails = PromotionalShippingDiscountDetails;
-			this.ShippingInsurance = ShippingInsurance;
-			this.InternationalShippingInsurance = InternationalShippingInsurance;
 
 			Execute();
 			
@@ -213,26 +211,6 @@ namespace eBay.Service.Call
 			get { return ApiRequest.PromotionalShippingDiscountDetails; }
 			set { ApiRequest.PromotionalShippingDiscountDetails = value; }
 		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="SetShippingDiscountProfilesRequestType.ShippingInsurance"/> of type <see cref="ShippingInsuranceType"/>.
-		/// </summary>
-		public ShippingInsuranceType ShippingInsurance
-		{ 
-			get { return ApiRequest.ShippingInsurance; }
-			set { ApiRequest.ShippingInsurance = value; }
-		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="SetShippingDiscountProfilesRequestType.InternationalShippingInsurance"/> of type <see cref="ShippingInsuranceType"/>.
-		/// </summary>
-		public ShippingInsuranceType InternationalShippingInsurance
-		{ 
-			get { return ApiRequest.InternationalShippingInsurance; }
-			set { ApiRequest.InternationalShippingInsurance = value; }
-		}
-		
-		
 
 		#endregion
 

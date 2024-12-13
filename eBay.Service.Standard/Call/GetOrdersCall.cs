@@ -109,7 +109,7 @@ namespace eBay.Service.Call
 		/// Default: <code>Ascending</code>
 		/// </param>
 		///
-		public List<OrderType> GetOrders(List<string> OrderIDList, DateTime CreateTimeFrom, DateTime CreateTimeTo, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus, ListingTypeCodeType ListingType, PaginationType Pagination, DateTime ModTimeFrom, DateTime ModTimeTo, int NumberOfDays, bool IncludeFinalValueFee, SortOrderCodeType SortingOrder)
+		public OrderArrayType GetOrders(List<string> OrderIDList, DateTime CreateTimeFrom, DateTime CreateTimeTo, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus, ListingTypeCodeType ListingType, PaginationType Pagination, DateTime ModTimeFrom, DateTime ModTimeTo, int NumberOfDays, bool IncludeFinalValueFee, SortOrderCodeType SortingOrder)
 		{
 			this.OrderIDList = OrderIDList;
 			this.CreateTimeFrom = CreateTimeFrom;
@@ -132,7 +132,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public List<OrderType> GetOrders(List<string> OrderIDList)
+		public OrderArrayType GetOrders(List<string> OrderIDList)
 		{
 			this.OrderIDList = OrderIDList;
 			Execute();
@@ -141,7 +141,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public List<OrderType> GetOrders(TimeFilter CreateTimeFilter, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus)
+		public OrderArrayType GetOrders(TimeFilter CreateTimeFilter, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus)
 		{
 			this.OrderRole = OrderRole;
 			this.OrderStatus = OrderStatus;
@@ -153,7 +153,7 @@ namespace eBay.Service.Call
 		/// <summary>
 		/// For backward compatibility with old wrappers.
 		/// </summary>
-		public List<OrderType> GetOrders(DateTime CreateTimeFrom, DateTime CreateTimeTo, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus)
+		public OrderArrayType GetOrders(DateTime CreateTimeFrom, DateTime CreateTimeTo, TradingRoleCodeType OrderRole, OrderStatusCodeType OrderStatus)
 		{
 			this.OrderRole = OrderRole;
 			this.OrderStatus = OrderStatus;
@@ -337,7 +337,7 @@ namespace eBay.Service.Call
         /// <summary>
         /// Gets the returned <see cref="GetOrdersResponseType.OrderArray"/> of type <see cref="List<OrderType>"/>.
         /// </summary>
-        public List<OrderType> OrderList
+        public OrderArrayType OrderList
 		{ 
 			get { return ApiResponse.OrderArray; }
 		}

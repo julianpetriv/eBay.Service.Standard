@@ -124,27 +124,27 @@ namespace eBay.Service.Call
 		/// If this field is included and set to <code>true</code>, the <b>Variations</b> node (and all variation data) is omitted for all multiple-variation listings in the response. If this field is omitted or set to <code>false</code>, the <b>Variations</b> node is returned for all multiple-variation listings in the response.
 		/// 
 		/// </param>
-		///
-		public BuyingSummaryType GetMyeBayBuying(ItemListCustomizationType WatchList, ItemListCustomizationType BidList, ItemListCustomizationType BestOfferList, ItemListCustomizationType WonList, ItemListCustomizationType LostList, MyeBaySelectionType FavoriteSearches, MyeBaySelectionType FavoriteSellers, MyeBaySelectionType SecondChanceOffer, BidAssistantListType BidAssistantList, ItemListCustomizationType DeletedFromWonList, ItemListCustomizationType DeletedFromLostList, ItemListCustomizationType BuyingSummary, MyeBaySelectionType UserDefinedLists, bool HideVariations)
-		{
-			this.WatchList = WatchList;
-			this.BidList = BidList;
-			this.BestOfferList = BestOfferList;
-			this.WonList = WonList;
-			this.LostList = LostList;
-			this.FavoriteSearches = FavoriteSearches;
-			this.FavoriteSellers = FavoriteSellers;
-			this.SecondChanceOffer = SecondChanceOffer;
-			this.BidAssistantList = BidAssistantList;
-			this.DeletedFromWonList = DeletedFromWonList;
-			this.DeletedFromLostList = DeletedFromLostList;
-			this.BuyingSummary = BuyingSummary;
-			this.UserDefinedLists = UserDefinedLists;
-			this.HideVariations = HideVariations;
-
-			Execute();
-			return ApiResponse.BuyingSummary;
-		}
+		/// 
+		// public BuyingSummaryType GetMyeBayBuying(ItemListCustomizationType WatchList, ItemListCustomizationType BidList, ItemListCustomizationType BestOfferList, ItemListCustomizationType WonList, ItemListCustomizationType LostList, MyeBaySelectionType FavoriteSearches, MyeBaySelectionType FavoriteSellers, MyeBaySelectionType SecondChanceOffer, BidAssistantListType BidAssistantList, ItemListCustomizationType DeletedFromWonList, ItemListCustomizationType DeletedFromLostList, ItemListCustomizationType BuyingSummary, MyeBaySelectionType UserDefinedLists, bool HideVariations)
+		// {
+		// 	this.WatchList = WatchList;
+		// 	this.BidList = BidList;
+		// 	this.BestOfferList = BestOfferList;
+		// 	this.WonList = WonList;
+		// 	this.LostList = LostList;
+		// 	this.FavoriteSearches = FavoriteSearches;
+		// 	this.FavoriteSellers = FavoriteSellers;
+		// 	this.SecondChanceOffer = SecondChanceOffer;
+		// 	this.BidAssistantList = BidAssistantList;
+		// 	this.DeletedFromWonList = DeletedFromWonList;
+		// 	this.DeletedFromLostList = DeletedFromLostList;
+		// 	this.BuyingSummary = BuyingSummary;
+		// 	this.UserDefinedLists = UserDefinedLists;
+		// 	this.HideVariations = HideVariations;
+		//
+		// 	Execute();
+		// 	return ApiResponse.BuyingSummary;
+		// }
 
 
 		/// <summary>
@@ -279,15 +279,6 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets or sets the <see cref="GetMyeBayBuyingRequestType.BidAssistantList"/> of type <see cref="BidAssistantListType"/>.
-		/// </summary>
-		public BidAssistantListType BidAssistantList
-		{ 
-			get { return ApiRequest.BidAssistantList; }
-			set { ApiRequest.BidAssistantList = value; }
-		}
-		
- 		/// <summary>
 		/// Gets or sets the <see cref="GetMyeBayBuyingRequestType.DeletedFromWonList"/> of type <see cref="ItemListCustomizationType"/>.
 		/// </summary>
 		public ItemListCustomizationType DeletedFromWonList
@@ -403,14 +394,6 @@ namespace eBay.Service.Call
 		public List<ItemType> SecondChanceOfferReturn
 		{ 
 			get { return ApiResponse.SecondChanceOffer; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetMyeBayBuyingResponseType.BidAssistantList"/> of type <see cref="BidGroupTypeCollection"/>.
-		/// </summary>
-		public List<BidGroupType> BidAssistantListList
-		{ 
-			get { return ApiResponse.BidAssistantList; }
 		}
 		
  		/// <summary>

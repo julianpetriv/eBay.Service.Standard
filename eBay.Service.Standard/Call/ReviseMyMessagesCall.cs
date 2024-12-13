@@ -97,7 +97,6 @@ namespace eBay.Service.Call
 		public void ReviseMyMessages(List<string> MessageIDList, List<string> AlertIDList, bool Read, bool Flagged, long FolderID)
 		{
 			this.MessageIDList = MessageIDList;
-			this.AlertIDList = AlertIDList;
 			this.Read = Read;
 			this.Flagged = Flagged;
 			this.FolderID = FolderID;
@@ -158,15 +157,6 @@ namespace eBay.Service.Call
 		{ 
 			get { return ApiRequest.MessageIDs; }
 			set { ApiRequest.MessageIDs = value; }
-		}
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="ReviseMyMessagesRequestType.AlertIDs"/> of type <see cref="List<string>"/>.
-		/// </summary>
-		public List<string> AlertIDList
-		{ 
-			get { return ApiRequest.AlertIDs; }
-			set { ApiRequest.AlertIDs = value; }
 		}
 		
  		/// <summary>

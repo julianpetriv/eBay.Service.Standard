@@ -133,24 +133,17 @@ namespace eBay.Service.EPS
 		/// <param name="photoDisplay">PhotoDisplayCodeType</param>
 		/// <param name="pictureFileList">picture file list</param>
 		/// <returns>string[]</returns>
-		public string[] UpLoadPictureFiles(PhotoDisplayCodeType photoDisplay, string[] pictureFileList)
+		public string[] UpLoadPictureFiles(string[] pictureFileList)
 		{
-            UploadSiteHostedPicturesRequestType request = new UploadSiteHostedPicturesRequestType();
+			UploadSiteHostedPicturesRequestType request = new UploadSiteHostedPicturesRequestType();
 			ArrayList epsList = new ArrayList();
 
-			foreach(string pictureFile in pictureFileList)
+			foreach (string pictureFile in pictureFileList)
 			{
-
-				if (photoDisplay == PhotoDisplayCodeType.PicturePack || photoDisplay == PhotoDisplayCodeType.SuperSize)
-				{
-					request.PictureSet = PictureSetCodeType.Supersize;
-				}
-				
 				UploadSiteHostedPicturesResponseType resp = this.UpLoadSiteHostedPicture(request, pictureFile);
 				epsList.Add(resp.SiteHostedPictureDetails.FullURL);
-
 			}
-			return (string[]) epsList.ToArray(typeof(string));
+			return (string[])epsList.ToArray(typeof(string));
 
 		}
 
@@ -160,10 +153,10 @@ namespace eBay.Service.EPS
 		/// <param name="photoDisplay">PhotoDisplayCodeType</param>
 		/// <param name="pictureFile">string</param>
 		/// <returns>string</returns>
-		public string UpLoadPictureFile(PhotoDisplayCodeType photoDisplay, string pictureFile)
+		public string UpLoadPictureFile(string pictureFile)
 		{
-			string[] piclst = this.UpLoadPictureFiles(photoDisplay, new string[] {pictureFile});
-			return (string) piclst[0];
+			string[] piclst = this.UpLoadPictureFiles(new string[] { pictureFile });
+			return (string)piclst[0];
 		}
 
  		/// <summary>

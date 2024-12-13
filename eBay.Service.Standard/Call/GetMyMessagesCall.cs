@@ -97,7 +97,6 @@ namespace eBay.Service.Call
 		///
 		public MyMessagesSummaryType GetMyMessages(List<string> AlertIDList, List<string> MessageIDList, long FolderID, DateTime StartTime, DateTime EndTime, List<string> ExternalMessageIDList, PaginationType Pagination, bool IncludeHighPriorityMessageOnly)
 		{
-			this.AlertIDList = AlertIDList;
 			this.MessageIDList = MessageIDList;
 			this.FolderID = FolderID;
 			this.StartTime = StartTime;
@@ -153,7 +152,6 @@ namespace eBay.Service.Call
 		///
 		public MyMessagesSummaryType GetMyMessages(List<string> AlertIDList, List<string> MessageIDList, long FolderID)
 		{
-			this.AlertIDList = AlertIDList;
 			this.MessageIDList = MessageIDList;
 			this.FolderID = FolderID;
 
@@ -191,16 +189,6 @@ namespace eBay.Service.Call
 		public GetMyMessagesResponseType ApiResponse
 		{ 
 			get { return (GetMyMessagesResponseType) AbstractResponse; }
-		}
-
-		
- 		/// <summary>
-		/// Gets or sets the <see cref="GetMyMessagesRequestType.AlertIDs"/> of type <see cref="List<string>"/>.
-		/// </summary>
-		public List<string> AlertIDList
-		{ 
-			get { return ApiRequest.AlertIDs; }
-			set { ApiRequest.AlertIDs = value; }
 		}
 		
  		/// <summary>
@@ -273,14 +261,6 @@ namespace eBay.Service.Call
 		public MyMessagesSummaryType Summary
 		{ 
 			get { return ApiResponse.Summary; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetMyMessagesResponseType.Alerts"/> of type <see cref="MyMessagesAlertTypeCollection"/>.
-		/// </summary>
-		public List<MyMessagesAlertType> AlertList
-		{ 
-			get { return ApiResponse.Alerts; }
 		}
 		
  		/// <summary>

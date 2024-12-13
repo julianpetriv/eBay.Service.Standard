@@ -145,22 +145,6 @@ namespace eBay.Service.Call
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GetShippingDiscountProfilesResponseType.ShippingInsurance"/> of type <see cref="ShippingInsuranceType"/>.
-		/// </summary>
-		public ShippingInsuranceType ShippingInsurance
-		{ 
-			get { return ApiResponse.ShippingInsurance; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GetShippingDiscountProfilesResponseType.InternationalShippingInsurance"/> of type <see cref="ShippingInsuranceType"/>.
-		/// </summary>
-		public ShippingInsuranceType InternationalShippingInsurance
-		{ 
-			get { return ApiResponse.InternationalShippingInsurance; }
-		}
-		
- 		/// <summary>
 		/// Gets the returned <see cref="GetShippingDiscountProfilesResponseType.CombinedDuration"/> of type <see cref="CombinedPaymentPeriodCodeType"/>.
 		/// </summary>
 		public CombinedPaymentPeriodCodeType CombinedDuration

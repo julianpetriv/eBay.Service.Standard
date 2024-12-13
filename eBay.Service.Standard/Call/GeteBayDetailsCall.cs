@@ -210,14 +210,6 @@ public List<RegionDetailsType> RegionDetailList
 		}
 		
  		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.UnitOfMeasurementDetails"/> of type <see cref="List<UnitOfMeasurementDetailsType>"/>.
-		/// </summary>
-		public List<UnitOfMeasurementDetailsType> UnitOfMeasurementDetailList
-		{ 
-			get { return ApiResponse.UnitOfMeasurementDetails; }
-		}
-		
- 		/// <summary>
 		/// Gets the returned <see cref="GeteBayDetailsResponseType.RegionOfOriginDetails"/> of type <see cref="List<RegionOfOriginDetailsType>"/>.
 		/// </summary>
 		public List<RegionOfOriginDetailsType> RegionOfOriginDetailList
@@ -247,14 +239,6 @@ public List<RegionDetailsType> RegionDetailList
 		public ReturnPolicyDetailsType ReturnPolicyDetails
 		{ 
 			get { return ApiResponse.ReturnPolicyDetails; }
-		}
-		
- 		/// <summary>
-		/// Gets the returned <see cref="GeteBayDetailsResponseType.InternationalReturnPolicyDetails"/> of type <see cref="ReturnPolicyDetailsType"/>.
-		/// </summary>
-		public ReturnPolicyDetailsType InternationalReturnPolicyDetails
-		{ 
-			get { return ApiResponse.InternationalReturnPolicyDetails; }
 		}
 
 /// <summary>
