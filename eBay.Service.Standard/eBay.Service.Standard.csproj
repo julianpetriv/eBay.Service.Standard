@@ -3,12 +3,16 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;NET45</TargetFrameworks>
     <Product>eBay Service SDK</Product>
-    <Version>3.1113.0.0</Version>
+    <Version>1.0.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Description>Use the eBay SDK for .NET to simplify common development tasks like logging, error handling, and authentication.</Description>
-    <PackageProjectUrl>https://github.com/mccj/eBay.Service.Standard</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/mccj/eBay.Service.Standard/master/LICENSE</PackageLicenseUrl>
+    <Description>Updated version of eBay.Service.Standard package by mccj that supports fresh version of Trading API</Description>
+    <PackageProjectUrl>https://github.com/julianpetriv/eBay.Service.Standard</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/julianpetriv/eBay.Service.Standard/master/LICENSE</PackageLicenseUrl>
     <PackageTags>eBay Service SDK</PackageTags>
+    <PackageId>eBay.Service.Standard.Updated</PackageId>
+    <Authors>julianpetriv</Authors>
+    <RepositoryUrl>https://github.com/julianpetriv/eBay.Service.Standard</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
