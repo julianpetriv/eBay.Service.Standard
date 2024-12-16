@@ -82,7 +82,7 @@ namespace WSDLTool
                         Annotation = getAnnotation(f2.Annotation),
                         Name = f2.Name,
                         TypeName = f2.SchemaTypeName.Name,
-                        IsArray = f2.MaxOccursString == "unbounded"
+                        IsArray = f2.MaxOccursString == "unbounded" || (int.TryParse(f2.MaxOccursString, out var maxOccurs) && maxOccurs > 1)
                     })
                     .Concat((((ff.ContentModel?.Content as System.Xml.Schema.XmlSchemaSimpleContentExtension)?.BaseTypeName?.Namespace != "http://www.w3.org/2001/XMLSchema") ? new System.Xml.Schema.XmlSchemaSimpleContentExtension[] { } : new[] { (ff.ContentModel?.Content as System.Xml.Schema.XmlSchemaSimpleContentExtension) }).Select(f2 => new
                     {

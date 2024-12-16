@@ -28720,8 +28720,9 @@ public partial class CustomPoliciesType {
     /// 						</span>					
     /// 					
     /// </remarks>
+[System.Xml.Serialization.XmlElement("ProductCompliancePolicyID")]
 
-	public long? ProductCompliancePolicyID { get; set; }
+	public System.Collections.Generic.List<long> ProductCompliancePolicyID { get; set; }
     /// <summary>
     /// AddFixedPriceItemAddItemAddItemsRelistFixedPriceItemRelistItemReviseFixedPriceItemReviseItemVerifyAddItemVerifyAddFixedPriceItemVerifyRelistItemNo
     /// </summary>
@@ -44866,8 +44867,9 @@ public partial class PictogramsType {
     /// 				  For product safety pictograms, use the <a href = "/api-docs/sell/metadata/resources/marketplace/methods/getProductSafetyLabels" target="_blank">getProductSafetyLabels</a> method in the <a href="https://developer.ebay.com/api-docs/sell/metadata/resources/methods">Metadata API</a> to find supported values for a specific marketplace/site.</span>	
     ///                
     /// </remarks>
+[System.Xml.Serialization.XmlElement("Pictogram")]
 
-	public string Pictogram { get; set; }
+	public System.Collections.Generic.List<string> Pictogram { get; set; }
 [System.Xml.Serialization.XmlAnyElement()]
 
 	public System.Xml.XmlElement[] Any { get; set; }
@@ -54690,8 +54692,9 @@ public partial class StatementsType {
     /// 				  For product safety statements, use the <a href = "/api-docs/sell/metadata/resources/marketplace/methods/getProductSafetyLabels" target="_blank">getProductSafetyLabels</a> method in the <a href="https://developer.ebay.com/api-docs/sell/metadata/resources/methods">Metadata API</a> to find supported values for a specific marketplace/site.</span>
     ///                
     /// </remarks>
+[System.Xml.Serialization.XmlElement("Statement")]
 
-	public string Statement { get; set; }
+	public System.Collections.Generic.List<string> Statement { get; set; }
 [System.Xml.Serialization.XmlAnyElement()]
 
 	public System.Xml.XmlElement[] Any { get; set; }
